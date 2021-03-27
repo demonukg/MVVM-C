@@ -3,27 +3,63 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0A1A972C260529C5007E84DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A972B260529C5007E84DF /* AppDelegate.swift */; };
 		0A1A972E260529C5007E84DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A972D260529C5007E84DF /* SceneDelegate.swift */; };
-		0A1A9730260529C5007E84DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A972F260529C5007E84DF /* ViewController.swift */; };
-		0A1A9733260529C5007E84DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A1A9731260529C5007E84DF /* Main.storyboard */; };
 		0A1A9735260529C7007E84DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A1A9734260529C7007E84DF /* Assets.xcassets */; };
 		0A1A9738260529C7007E84DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A1A9736260529C7007E84DF /* LaunchScreen.storyboard */; };
+		0A1A97452605319D007E84DF /* Coordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A97442605319D007E84DF /* Coordinatable.swift */; };
+		0A1A9749260531DC007E84DF /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A9748260531DC007E84DF /* Presentable.swift */; };
+		0A1A974C26053274007E84DF /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A974B26053274007E84DF /* Routable.swift */; };
+		0A1A975026053457007E84DF /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A974F26053457007E84DF /* Typealiases.swift */; };
+		0A1A97542605368D007E84DF /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A97532605368D007E84DF /* BaseCoordinator.swift */; };
+		0A1A9762260637E0007E84DF /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A9761260637E0007E84DF /* AppCoordinator.swift */; };
+		0A1A976926075A8B007E84DF /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A976826075A8B007E84DF /* AppRouter.swift */; };
+		0A1A977226077489007E84DF /* AppCoordinatorAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A977126077489007E84DF /* AppCoordinatorAssembly.swift */; };
+		0A1A977926077970007E84DF /* ServicesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A977826077970007E84DF /* ServicesAssembly.swift */; };
+		0A6ED2EF260796C200807C43 /* Notification.Name+Logout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6ED2EE260796C200807C43 /* Notification.Name+Logout.swift */; };
+		0A6ED2FE26079E3000807C43 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6ED2F726079E3000807C43 /* AuthViewModel.swift */; };
+		0A6ED2FF26079E3000807C43 /* AuthModuleAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6ED2F826079E3000807C43 /* AuthModuleAssembly.swift */; };
+		0A6ED30026079E3000807C43 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6ED2FA26079E3000807C43 /* AuthView.swift */; };
+		0A6ED30126079E3000807C43 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6ED2FC26079E3000807C43 /* AuthViewController.swift */; };
+		0A6ED30226079E3000807C43 /* AuthModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6ED2FD26079E3000807C43 /* AuthModule.swift */; };
+		0A6ED30626079FF000807C43 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6ED30526079FF000807C43 /* AuthCoordinator.swift */; };
+		0A9DA96826078F60007D935D /* AuthCoordinatorAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9DA96726078F60007D935D /* AuthCoordinatorAssembly.swift */; };
+		0A9DA96B26079295007D935D /* MainCoordinatorAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9DA96A26079295007D935D /* MainCoordinatorAssembly.swift */; };
+		C95266B5DF26593476972641 /* Pods_Lapa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E4B059F21F6717E85E8175 /* Pods_Lapa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0A1A9728260529C5007E84DF /* Lapa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lapa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A1A972B260529C5007E84DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A1A972D260529C5007E84DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0A1A972F260529C5007E84DF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0A1A9732260529C5007E84DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0A1A9734260529C7007E84DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A1A9737260529C7007E84DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A1A9739260529C7007E84DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A1A97442605319D007E84DF /* Coordinatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinatable.swift; sourceTree = "<group>"; };
+		0A1A9748260531DC007E84DF /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
+		0A1A974B26053274007E84DF /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
+		0A1A974F26053457007E84DF /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
+		0A1A97532605368D007E84DF /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		0A1A9761260637E0007E84DF /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		0A1A976826075A8B007E84DF /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		0A1A977126077489007E84DF /* AppCoordinatorAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorAssembly.swift; sourceTree = "<group>"; };
+		0A1A977826077970007E84DF /* ServicesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesAssembly.swift; sourceTree = "<group>"; };
+		0A6ED2EE260796C200807C43 /* Notification.Name+Logout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification.Name+Logout.swift"; sourceTree = "<group>"; };
+		0A6ED2F726079E3000807C43 /* AuthViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		0A6ED2F826079E3000807C43 /* AuthModuleAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthModuleAssembly.swift; sourceTree = "<group>"; };
+		0A6ED2FA26079E3000807C43 /* AuthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		0A6ED2FC26079E3000807C43 /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		0A6ED2FD26079E3000807C43 /* AuthModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthModule.swift; sourceTree = "<group>"; };
+		0A6ED30526079FF000807C43 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
+		0A9DA96726078F60007D935D /* AuthCoordinatorAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinatorAssembly.swift; sourceTree = "<group>"; };
+		0A9DA96A26079295007D935D /* MainCoordinatorAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorAssembly.swift; sourceTree = "<group>"; };
+		3A39E3AEB79F0A71461C36FB /* Pods-Lapa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lapa.debug.xcconfig"; path = "Target Support Files/Pods-Lapa/Pods-Lapa.debug.xcconfig"; sourceTree = "<group>"; };
+		85E4B059F21F6717E85E8175 /* Pods_Lapa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lapa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D25FE9DE9FEE173E1B05181B /* Pods-Lapa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lapa.release.xcconfig"; path = "Target Support Files/Pods-Lapa/Pods-Lapa.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C95266B5DF26593476972641 /* Pods_Lapa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +79,8 @@
 			children = (
 				0A1A972A260529C5007E84DF /* Lapa */,
 				0A1A9729260529C5007E84DF /* Products */,
+				3393855E0240C84F675C213D /* Pods */,
+				75924DB81FEF161E065A3349 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +97,158 @@
 			children = (
 				0A1A972B260529C5007E84DF /* AppDelegate.swift */,
 				0A1A972D260529C5007E84DF /* SceneDelegate.swift */,
-				0A1A972F260529C5007E84DF /* ViewController.swift */,
-				0A1A9731260529C5007E84DF /* Main.storyboard */,
 				0A1A9734260529C7007E84DF /* Assets.xcassets */,
 				0A1A9736260529C7007E84DF /* LaunchScreen.storyboard */,
 				0A1A9739260529C7007E84DF /* Info.plist */,
+				0AF2CFAB260FA99A006903CC /* Model */,
+				0A1A977726077912007E84DF /* Application Layer */,
+				0A1A9776260778DC007E84DF /* Presentation Layer */,
+				0A1A974E26053438007E84DF /* Helpers */,
 			);
 			path = Lapa;
+			sourceTree = "<group>";
+		};
+		0A1A974326053180007E84DF /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				0A1A97442605319D007E84DF /* Coordinatable.swift */,
+				0A1A9748260531DC007E84DF /* Presentable.swift */,
+				0A1A974B26053274007E84DF /* Routable.swift */,
+				0A1A97532605368D007E84DF /* BaseCoordinator.swift */,
+				0A1A976826075A8B007E84DF /* AppRouter.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		0A1A974E26053438007E84DF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0A6ED2ED2607966D00807C43 /* Extensions */,
+				0A1A974F26053457007E84DF /* Typealiases.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		0A1A977426077817007E84DF /* MainFlow */ = {
+			isa = PBXGroup;
+			children = (
+				0A9DA96A26079295007D935D /* MainCoordinatorAssembly.swift */,
+			);
+			path = MainFlow;
+			sourceTree = "<group>";
+		};
+		0A1A977526077840007E84DF /* AuthFlow */ = {
+			isa = PBXGroup;
+			children = (
+				0A6ED2F526079E3000807C43 /* Auth */,
+				0A9DA96726078F60007D935D /* AuthCoordinatorAssembly.swift */,
+				0A6ED30526079FF000807C43 /* AuthCoordinator.swift */,
+			);
+			path = AuthFlow;
+			sourceTree = "<group>";
+		};
+		0A1A9776260778DC007E84DF /* Presentation Layer */ = {
+			isa = PBXGroup;
+			children = (
+				0A1A977426077817007E84DF /* MainFlow */,
+				0A1A977526077840007E84DF /* AuthFlow */,
+			);
+			path = "Presentation Layer";
+			sourceTree = "<group>";
+		};
+		0A1A977726077912007E84DF /* Application Layer */ = {
+			isa = PBXGroup;
+			children = (
+				0A1A974326053180007E84DF /* Coordinator */,
+				0A1A977826077970007E84DF /* ServicesAssembly.swift */,
+				0A1A977126077489007E84DF /* AppCoordinatorAssembly.swift */,
+				0A1A9761260637E0007E84DF /* AppCoordinator.swift */,
+			);
+			path = "Application Layer";
+			sourceTree = "<group>";
+		};
+		0A6ED2ED2607966D00807C43 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0A6ED2EE260796C200807C43 /* Notification.Name+Logout.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0A6ED2F526079E3000807C43 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				0A6ED2F626079E3000807C43 /* ViewModel */,
+				0A6ED2F826079E3000807C43 /* AuthModuleAssembly.swift */,
+				0A6ED2F926079E3000807C43 /* View */,
+				0A6ED2FB26079E3000807C43 /* ViewController */,
+				0A6ED2FD26079E3000807C43 /* AuthModule.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		0A6ED2F626079E3000807C43 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0A6ED2F726079E3000807C43 /* AuthViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0A6ED2F926079E3000807C43 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0A6ED2FA26079E3000807C43 /* AuthView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0A6ED2FB26079E3000807C43 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0A6ED2FC26079E3000807C43 /* AuthViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0AF2CFAB260FA99A006903CC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0AF2CFAE260FA9BE006903CC /* Entities */,
+				0AF2CFAC260FA9AC006903CC /* Services */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0AF2CFAC260FA9AC006903CC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		0AF2CFAE260FA9BE006903CC /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		3393855E0240C84F675C213D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3A39E3AEB79F0A71461C36FB /* Pods-Lapa.debug.xcconfig */,
+				D25FE9DE9FEE173E1B05181B /* Pods-Lapa.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		75924DB81FEF161E065A3349 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				85E4B059F21F6717E85E8175 /* Pods_Lapa.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +258,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0A1A973C260529C7007E84DF /* Build configuration list for PBXNativeTarget "Lapa" */;
 			buildPhases = (
+				193867D1BCCBC9A8521693DC /* [CP] Check Pods Manifest.lock */,
 				0A1A9724260529C5007E84DF /* Sources */,
 				0A1A9725260529C5007E84DF /* Frameworks */,
 				0A1A9726260529C5007E84DF /* Resources */,
+				176D6D0D6C0F2445D546E5AB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,34 +312,84 @@
 			files = (
 				0A1A9738260529C7007E84DF /* LaunchScreen.storyboard in Resources */,
 				0A1A9735260529C7007E84DF /* Assets.xcassets in Resources */,
-				0A1A9733260529C5007E84DF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		176D6D0D6C0F2445D546E5AB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lapa/Pods-Lapa-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lapa/Pods-Lapa-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lapa/Pods-Lapa-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		193867D1BCCBC9A8521693DC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Lapa-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0A1A9724260529C5007E84DF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A1A9730260529C5007E84DF /* ViewController.swift in Sources */,
+				0A1A977926077970007E84DF /* ServicesAssembly.swift in Sources */,
+				0A1A974C26053274007E84DF /* Routable.swift in Sources */,
+				0A1A975026053457007E84DF /* Typealiases.swift in Sources */,
+				0A6ED30226079E3000807C43 /* AuthModule.swift in Sources */,
+				0A1A97452605319D007E84DF /* Coordinatable.swift in Sources */,
+				0A6ED2EF260796C200807C43 /* Notification.Name+Logout.swift in Sources */,
+				0A6ED2FE26079E3000807C43 /* AuthViewModel.swift in Sources */,
 				0A1A972C260529C5007E84DF /* AppDelegate.swift in Sources */,
+				0A1A9749260531DC007E84DF /* Presentable.swift in Sources */,
+				0A1A9762260637E0007E84DF /* AppCoordinator.swift in Sources */,
+				0A6ED30626079FF000807C43 /* AuthCoordinator.swift in Sources */,
+				0A9DA96B26079295007D935D /* MainCoordinatorAssembly.swift in Sources */,
 				0A1A972E260529C5007E84DF /* SceneDelegate.swift in Sources */,
+				0A6ED2FF26079E3000807C43 /* AuthModuleAssembly.swift in Sources */,
+				0A1A977226077489007E84DF /* AppCoordinatorAssembly.swift in Sources */,
+				0A1A976926075A8B007E84DF /* AppRouter.swift in Sources */,
+				0A6ED30026079E3000807C43 /* AuthView.swift in Sources */,
+				0A9DA96826078F60007D935D /* AuthCoordinatorAssembly.swift in Sources */,
+				0A6ED30126079E3000807C43 /* AuthViewController.swift in Sources */,
+				0A1A97542605368D007E84DF /* BaseCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0A1A9731260529C5007E84DF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0A1A9732260529C5007E84DF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0A1A9736260529C7007E84DF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -283,6 +519,7 @@
 		};
 		0A1A973D260529C7007E84DF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A39E3AEB79F0A71461C36FB /* Pods-Lapa.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -296,12 +533,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lapa.Lapa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		0A1A973E260529C7007E84DF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D25FE9DE9FEE173E1B05181B /* Pods-Lapa.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -315,7 +553,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lapa.Lapa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
