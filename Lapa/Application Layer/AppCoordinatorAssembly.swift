@@ -12,7 +12,12 @@ struct AppCoordinatorAssembly: Assembly {
         parent: parentAssembler
       )
       let router = resolver.resolve(AppRouter.self)!
-      let coordinator = AppCoordinatorImpl(assembler: assembler, router: router)
+      let authService = resolver.resolve(AuthenticationService.self)!
+      let coordinator = AppCoordinatorImpl(
+        assembler: assembler,
+        router: router,
+        authService: authService
+      )
       return coordinator
     }
   }

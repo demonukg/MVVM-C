@@ -8,20 +8,25 @@ final class AppCoordinatorImpl: BaseCoordinator, AppCoordinator {
   
   enum AppCoordinatorStep {
     
+    case initial
     case auth
     case main
   }
   
-  private lazy var currentSteps: [AppCoordinatorStep] = [.auth, .main]
+  private lazy var currentSteps = steps()
   
   //private var mainCoordinator: MainCoordinator?
-  
-  override init(
-    assembler: Assembler,
-    router: Routable
-  ) {
-    super.init(assembler: assembler, router: router)
 
+  private let authService: AuthenticationService
+  
+  init(
+    assembler: Assembler,
+    router: Routable,
+    authService: AuthenticationService
+  ) {
+    self.authService = authService
+
+    super.init(assembler: assembler, router: router)
     NotificationCenter.default.addObserver(
       self,
       selector: #selector(logout),
@@ -39,11 +44,22 @@ final class AppCoordinatorImpl: BaseCoordinator, AppCoordinator {
   }
   
   func start() {
-    startScenario(with: .auth)
+    startScenario(with: .initial)
   }
 }
 
 private extension AppCoordinatorImpl {
+
+  private func steps() -> [AppCoordinatorStep] {
+    var steps: [AppCoordinatorStep] = []
+
+    if !authService.authenticated {
+      steps.append(.auth)
+    }
+    steps.append(.main)
+
+    return steps
+  }
   
   func startScenario(with step: AppCoordinatorStep) {
     switch step {
@@ -51,13 +67,20 @@ private extension AppCoordinatorImpl {
       runAuthFlow(authType: .login)
     case .main:
       break
-      //runMainFlow(with: option)
+    //runMainFlow(with: option)
+    case .initial:
+      break
     }
   }
+
+  func startNextStep(afterStep: AppCoordinatorStep) {
+    let nextSteps = currentSteps.filter { $0 != afterStep }
+    guard let nextStep = nextSteps.first else { fatalError("Steps is over, your flow is bad") }
+    currentSteps = nextSteps
+    startScenario(with: nextStep)
+  }
   
-  func runAuthFlow(
-    authType: AuthModule.Input.AuthType
-  ) {
+  func runAuthFlow(authType: AuthModule.Input.AuthType) {
     let input = AuthCoordinatorAssembly.Input(authType: authType)
 
     let coordinator = assembler.resolver.resolve(
@@ -68,9 +91,13 @@ private extension AppCoordinatorImpl {
     
     coordinator.onFinish = { [weak self, weak coordinator] in
       self?.removeDependency(coordinator)
-      //self?.runMainFlow(with: option)
+      self?.startNextStep(afterStep: .auth)
     }
     addDependency(coordinator)
     coordinator.start()
+  }
+
+  func showInitialLoadingModule() {
+    startNextStep(afterStep: .initial)
   }
 }

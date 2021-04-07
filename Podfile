@@ -5,6 +5,9 @@ target 'Lapa' do
     pod 'RxSwift', '~> 6.1'
     pod 'RxRelay', '~> 6.1'
     pod 'RxDataSources', '~> 5.0'
+
+    pod 'RxAlamofire', '~> 6.1'
+    pod 'Alamofire', '~> 5.4'
   
     pod 'SnapKit', '~> 5.0'
     pod 'NVActivityIndicatorView', '~> 4.8'
