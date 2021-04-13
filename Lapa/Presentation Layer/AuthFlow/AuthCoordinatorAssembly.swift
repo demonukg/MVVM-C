@@ -10,6 +10,7 @@ struct AuthCoordinatorAssembly: Assembly {
     container.register(AuthCoordinator.self) { (resolver, parentAssembler: Assembler, input: Input) in
       let assembler = Assembler(
         [
+          AuthModuleAssembly()
         ],
         parent: parentAssembler
       )

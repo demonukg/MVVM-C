@@ -18,6 +18,20 @@ final class AuthCoordinatorImpl: BaseCoordinator, AuthCoordinator {
   }
 
   func start() {
-    
+    showMainModule()
+  }
+}
+
+private extension AuthCoordinatorImpl {
+
+  func showMainModule() {
+    let module = assembler.resolver.resolve(
+      AuthModule.self,
+      argument: AuthModule.Input(authType: .login)
+    )!
+    module.onFinish = {
+      print("qwer onFinish")
+    }
+    router.setRootModule(module)
   }
 }

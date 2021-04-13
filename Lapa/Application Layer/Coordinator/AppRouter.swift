@@ -23,6 +23,7 @@ final class AppRouterImpl: NSObject, AppRouter {
   init(rootController: UINavigationController) {
     self.rootController = rootController
     self.rootController.modalPresentationStyle = .fullScreen
+    self.rootController.view.backgroundColor = .white
     completions = [:]
   }
   

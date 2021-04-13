@@ -1,6 +1,6 @@
 import UIKit
 
-protocol Presentable {
+protocol Presentable: class {
   
   var toPresent: UIViewController? { get }
 }

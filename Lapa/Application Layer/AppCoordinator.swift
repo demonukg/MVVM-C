@@ -51,7 +51,7 @@ final class AppCoordinatorImpl: BaseCoordinator, AppCoordinator {
 private extension AppCoordinatorImpl {
 
   private func steps() -> [AppCoordinatorStep] {
-    var steps: [AppCoordinatorStep] = []
+    var steps: [AppCoordinatorStep] = [.initial]
 
     if !authService.authenticated {
       steps.append(.auth)
@@ -69,7 +69,7 @@ private extension AppCoordinatorImpl {
       break
     //runMainFlow(with: option)
     case .initial:
-      break
+      showInitialLoadingModule()
     }
   }
 

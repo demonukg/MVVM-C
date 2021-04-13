@@ -27,7 +27,7 @@ struct ApiServicesAssembly: Assembly {
 
     container.register(ApiService.self) { resolver in
       ApiServiceImpl { target in
-        resolver.resolve(ApiRequestable.self, arguments: resolver, target)!
+        resolver.resolve(ApiRequestable.self, argument: target)!
       }
     }
     .inObjectScope(.container)

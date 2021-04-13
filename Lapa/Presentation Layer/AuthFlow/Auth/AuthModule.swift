@@ -11,5 +11,6 @@ struct AuthModuleInput {
 protocol AuthModule: Presentable {
 
   typealias Input = AuthModuleInput
-	
+
+  var onFinish: EmptyActionBlock? { get set }
 }

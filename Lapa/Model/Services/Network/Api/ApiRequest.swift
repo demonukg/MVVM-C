@@ -11,7 +11,9 @@ struct ApiRequest: ApiRequestable {
     target: ApiTarget,
     manager: Session
   ) {
+
     let requestUrl = url
+      .appendingPathComponent(target.version.stringValue)
       .appendingPathComponent(target.path)
 
     switch target.requestParameterType {
@@ -86,7 +88,7 @@ struct ApiRequest: ApiRequestable {
       .validate { _, response, data in
         guard let _ = data else { return .failure(ApiResponseError.badServerResponse) }
 
-        if response.statusCode == 200 { return .success(()) }
+        if 200...299 ~= response.statusCode { return .success(()) }
 
         return .failure(ApiResponseError.badServerResponse)
 //        guard let apiError = try? JSONDecoder().decode(ApiError.self, from: data) else {
