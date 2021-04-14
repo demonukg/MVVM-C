@@ -6,6 +6,7 @@ final class ProgressView: UIView {
 
   private let progressWindow: UIWindow = {
     let window = UIWindow(frame: UIScreen.main.bounds)
+    window.windowScene = UIApplication.shared.windows.first?.windowScene
     window.windowLevel = .alert
     return window
   }()
