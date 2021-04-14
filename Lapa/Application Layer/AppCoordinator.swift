@@ -66,6 +66,7 @@ private extension AppCoordinatorImpl {
     case .auth:
       runAuthFlow(authType: .login)
     case .main:
+      print("runMainFlow")
       break
     //runMainFlow(with: option)
     case .initial:

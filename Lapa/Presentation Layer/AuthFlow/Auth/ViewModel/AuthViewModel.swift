@@ -3,11 +3,11 @@ import RxSwift
 final class AuthViewModel: ViewModelTransform {
 
   struct Input {
-    let onEnter: Observable<String>
+    let onEnterPhone: Observable<String>
   }
 
   struct Output {
-    let onSuccess: Observable<Void>
+    let onSuccessPhone: Observable<String>
     let loading: Observable<VMLoadingType>
     let errors: Observable<VMErrorType>
   }
@@ -19,12 +19,14 @@ final class AuthViewModel: ViewModelTransform {
   }
 
   func transform(input: Input) -> Output {
-    let enterResult = input.onEnter
+    let enterResult = input.onEnterPhone
       .flatMap { self.authService.login($0).asLoadingSequence() }
       .share()
 
+    let onSuccessPhone = enterResult.element.withLatestFrom(input.onEnterPhone)
+
     return Output(
-      onSuccess: enterResult.element,
+      onSuccessPhone: onSuccessPhone,
       loading: enterResult.loading.asBlockingActivity(),
       errors: enterResult.errors.asMessage()
     )

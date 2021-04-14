@@ -54,6 +54,11 @@
 		0ABE9E05261A231E0019FF26 /* ApiRequestRetrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABE9E04261A231E0019FF26 /* ApiRequestRetrier.swift */; };
 		0ABE9E08261A42620019FF26 /* ApiRequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABE9E07261A42620019FF26 /* ApiRequestInterceptor.swift */; };
 		0ABE9E0F261E241E0019FF26 /* AuthenticationServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABE9E0E261E241E0019FF26 /* AuthenticationServiceAssembly.swift */; };
+		0AE08326262699EB00F8DFCD /* ValidationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE0831F262699EB00F8DFCD /* ValidationViewModel.swift */; };
+		0AE08327262699EB00F8DFCD /* ValidationModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE08320262699EB00F8DFCD /* ValidationModule.swift */; };
+		0AE08328262699EB00F8DFCD /* ValidationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE08322262699EB00F8DFCD /* ValidationView.swift */; };
+		0AE08329262699EB00F8DFCD /* ValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE08324262699EB00F8DFCD /* ValidationViewController.swift */; };
+		0AE0832A262699EB00F8DFCD /* ValidationModuleAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE08325262699EB00F8DFCD /* ValidationModuleAssembly.swift */; };
 		0AF2CFB02610C843006903CC /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF2CFAF2610C843006903CC /* AuthenticationService.swift */; };
 		0AF2CFB52610C88E006903CC /* OAuthToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF2CFB42610C88E006903CC /* OAuthToken.swift */; };
 		0AF2CFBA2610CE77006903CC /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF2CFB92610CE77006903CC /* ApiService.swift */; };
@@ -123,6 +128,11 @@
 		0ABE9E04261A231E0019FF26 /* ApiRequestRetrier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestRetrier.swift; sourceTree = "<group>"; };
 		0ABE9E07261A42620019FF26 /* ApiRequestInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestInterceptor.swift; sourceTree = "<group>"; };
 		0ABE9E0E261E241E0019FF26 /* AuthenticationServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationServiceAssembly.swift; sourceTree = "<group>"; };
+		0AE0831F262699EB00F8DFCD /* ValidationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationViewModel.swift; sourceTree = "<group>"; };
+		0AE08320262699EB00F8DFCD /* ValidationModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationModule.swift; sourceTree = "<group>"; };
+		0AE08322262699EB00F8DFCD /* ValidationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationView.swift; sourceTree = "<group>"; };
+		0AE08324262699EB00F8DFCD /* ValidationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationViewController.swift; sourceTree = "<group>"; };
+		0AE08325262699EB00F8DFCD /* ValidationModuleAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationModuleAssembly.swift; sourceTree = "<group>"; };
 		0AF2CFAF2610C843006903CC /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		0AF2CFB42610C88E006903CC /* OAuthToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthToken.swift; sourceTree = "<group>"; };
 		0AF2CFB92610CE77006903CC /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
@@ -227,6 +237,7 @@
 		0A1A977526077840007E84DF /* AuthFlow */ = {
 			isa = PBXGroup;
 			children = (
+				0AE0831D262699EB00F8DFCD /* Validation */,
 				0A6ED2F526079E3000807C43 /* Auth */,
 				0A9DA96726078F60007D935D /* AuthCoordinatorAssembly.swift */,
 				0A6ED30526079FF000807C43 /* AuthCoordinator.swift */,
@@ -396,6 +407,42 @@
 				0ABE9E0E261E241E0019FF26 /* AuthenticationServiceAssembly.swift */,
 			);
 			path = AuthenticationService;
+			sourceTree = "<group>";
+		};
+		0AE0831D262699EB00F8DFCD /* Validation */ = {
+			isa = PBXGroup;
+			children = (
+				0AE08325262699EB00F8DFCD /* ValidationModuleAssembly.swift */,
+				0AE08320262699EB00F8DFCD /* ValidationModule.swift */,
+				0AE0831E262699EB00F8DFCD /* ViewModel */,
+				0AE08321262699EB00F8DFCD /* View */,
+				0AE08323262699EB00F8DFCD /* ViewController */,
+			);
+			path = Validation;
+			sourceTree = "<group>";
+		};
+		0AE0831E262699EB00F8DFCD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0AE0831F262699EB00F8DFCD /* ValidationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0AE08321262699EB00F8DFCD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0AE08322262699EB00F8DFCD /* ValidationView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0AE08323262699EB00F8DFCD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0AE08324262699EB00F8DFCD /* ValidationViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		0AF2CFAB260FA99A006903CC /* Model */ = {
@@ -617,6 +664,7 @@
 				0A1A974C26053274007E84DF /* Routable.swift in Sources */,
 				0A96B1B02624961E0072216A /* UIView+ActivityIndicator.swift in Sources */,
 				0A1A975026053457007E84DF /* Typealiases.swift in Sources */,
+				0AE08327262699EB00F8DFCD /* ValidationModule.swift in Sources */,
 				0AF2CFE12610F685006903CC /* ApiSafeDecodable.swift in Sources */,
 				0A96B1D52625D8930072216A /* LoadingSequence.swift in Sources */,
 				0A6ED30226079E3000807C43 /* AuthModule.swift in Sources */,
@@ -627,6 +675,7 @@
 				0A96B1892623580D0072216A /* VMErrorType.swift in Sources */,
 				0A96B196262358DC0072216A /* UIViewController+VMLoadingType.swift in Sources */,
 				0A6ED2EF260796C200807C43 /* Notification.Name+Logout.swift in Sources */,
+				0AE08328262699EB00F8DFCD /* ValidationView.swift in Sources */,
 				0A96B1A02623ED2F0072216A /* ErrorView.swift in Sources */,
 				0A96B1B8262497510072216A /* Layout.swift in Sources */,
 				0A96B1AC2623F3110072216A /* ProgressSuccessView.swift in Sources */,
@@ -649,6 +698,7 @@
 				0A1A9762260637E0007E84DF /* AppCoordinator.swift in Sources */,
 				0A96B184262356EE0072216A /* UIViewController+ViewHolder.swift in Sources */,
 				0AF2CFFB261A0261006903CC /* ApiRequestAdapter.swift in Sources */,
+				0AE0832A262699EB00F8DFCD /* ValidationModuleAssembly.swift in Sources */,
 				0AF2CFEB2612587A006903CC /* ApiServicesAssembly.swift in Sources */,
 				0A6ED30626079FF000807C43 /* AuthCoordinator.swift in Sources */,
 				0A9DA96B26079295007D935D /* MainCoordinatorAssembly.swift in Sources */,
@@ -664,10 +714,12 @@
 				0AF2CFBA2610CE77006903CC /* ApiService.swift in Sources */,
 				0A6ED30026079E3000807C43 /* AuthView.swift in Sources */,
 				0A96B18C2623583C0072216A /* VMLoadingType.swift in Sources */,
+				0AE08326262699EB00F8DFCD /* ValidationViewModel.swift in Sources */,
 				0A9DA96826078F60007D935D /* AuthCoordinatorAssembly.swift in Sources */,
 				0A6ED30126079E3000807C43 /* AuthViewController.swift in Sources */,
 				0AF2CFD32610D300006903CC /* ApiRequestable.swift in Sources */,
 				0A1A97542605368D007E84DF /* BaseCoordinator.swift in Sources */,
+				0AE08329262699EB00F8DFCD /* ValidationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,7 +5,7 @@ final class AuthViewController: UIViewController, AuthModule, ViewHolder {
 
   typealias RootViewType = AuthView
 
-  var onFinish: EmptyActionBlock?
+  var onSuccessPhone: SingleActionBlock<String>?
 
   private let viewModel: AuthViewModel
 
@@ -13,6 +13,7 @@ final class AuthViewController: UIViewController, AuthModule, ViewHolder {
     self.viewModel = viewModel
 
     super.init(nibName: nil, bundle: nil)
+    title = "Authorization"
   }
 
   required init?(coder: NSCoder) {
@@ -28,11 +29,11 @@ final class AuthViewController: UIViewController, AuthModule, ViewHolder {
 
     let onEnterSubject = PublishSubject<String>()
 
-    let output = viewModel.transform(input: .init(onEnter: onEnterSubject))
+    let output = viewModel.transform(input: .init(onEnterPhone: onEnterSubject))
 
-    output.onSuccess
+    output.onSuccessPhone
       .subscribe(onNext: { [weak self] in
-        self?.onFinish?()
+        self?.onSuccessPhone?($0)
       })
       .disposed(by: disposeBag)
 

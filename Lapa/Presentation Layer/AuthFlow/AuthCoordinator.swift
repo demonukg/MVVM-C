@@ -18,20 +18,32 @@ final class AuthCoordinatorImpl: BaseCoordinator, AuthCoordinator {
   }
 
   func start() {
-    showMainModule()
+    showAuthModule()
   }
 }
 
 private extension AuthCoordinatorImpl {
 
-  func showMainModule() {
+  func showAuthModule() {
     let module = assembler.resolver.resolve(
       AuthModule.self,
       argument: AuthModule.Input(authType: .login)
     )!
-    module.onFinish = {
-      print("qwer onFinish")
+    module.onSuccessPhone = { [weak self] in
+      self?.showValidationModule(for: $0)
     }
     router.setRootModule(module)
+  }
+
+  func showValidationModule(for phoneNumber: String) {
+    let module = assembler.resolver.resolve(
+      ValidationModule.self,
+      argument: ValidationModule.Input(phoneNumber: phoneNumber)
+    )!
+
+    module.onFinish = { [weak self] in
+      self?.onFinish?()
+    }
+    router.push(module)
   }
 }
