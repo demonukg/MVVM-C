@@ -22,6 +22,9 @@ final class AuthViewController: UIViewController, AuthModule, ViewHolder {
 
   override func loadView() {
     view = AuthView()
+
+    let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard(_:)))
+    rootView.addGestureRecognizer(tapGesture)
   }
 
   override func viewDidLoad() {
@@ -29,11 +32,22 @@ final class AuthViewController: UIViewController, AuthModule, ViewHolder {
 
     let onEnterSubject = PublishSubject<String>()
 
-    let output = viewModel.transform(input: .init(onEnterPhone: onEnterSubject))
+    let output = viewModel.transform(
+      input: .init(
+        onEnterPhone: onEnterSubject,
+        onPhoneChanged: rootView.phoneNumberField.rx.text.orEmpty.asObservable()
+      )
+    )
 
     output.onSuccessPhone
       .subscribe(onNext: { [weak self] in
         self?.onSuccessPhone?($0)
+      })
+      .disposed(by: disposeBag)
+
+    output.onIsValidChanged
+      .subscribe(onNext: { [weak self] isValid in
+        self?.rootView.phoneNumberField.layer.borderWidth = isValid ? 0 : 2
       })
       .disposed(by: disposeBag)
 
@@ -46,5 +60,9 @@ final class AuthViewController: UIViewController, AuthModule, ViewHolder {
     rootView.onEnterTap = {
       onEnterSubject.onNext($0)
     }
+  }
+
+  @objc func dismissKeyboard (_ sender: UITapGestureRecognizer) {
+    rootView.phoneNumberField.resignFirstResponder()
   }
 }

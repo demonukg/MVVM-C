@@ -3,6 +3,7 @@ import UIKit
 extension UIColor {
 
   static let x38CCCC = UIColor(hex: 0x38CCCC)
+  static let xF4F4F4 = UIColor(hex: 0xF4F4F4)
 }
 
 // MARK: Hex colors

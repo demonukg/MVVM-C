@@ -5,9 +5,11 @@ final class AuthView: UIView {
 
   var onEnterTap: SingleActionBlock<String>?
 
-  private let phoneNumberField: UITextField = {
-    let textField = UITextField()
-    textField.placeholder = "+73616751221"
+  let phoneNumberField: UITextField = {
+    let textField = PrimaryTextField()
+    textField.attributedPlaceholder = NSAttributedString(string: "+73616751221", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+    textField.keyboardType = .phonePad
+    textField.layer.borderColor = UIColor.red.cgColor
     return textField
   }()
 
@@ -38,25 +40,28 @@ final class AuthView: UIView {
   private func setupInitialLayout() {
     let stack = [
       titleLabel,
-      phoneNumberField
+      phoneNumberField,
+      enterButton
     ]
     .toVerticalStackView()
     .spaced(Layout.Spacing.mediumBig)
+    .with(spacing: Layout.Spacing.mediumBiggest, after: phoneNumberField)
     .with(alignment: .center)
     .build()
 
     addSubview(stack)
 
     stack.snp.makeConstraints { make in
-      make.top.equalTo(safeAreaLayoutGuide).inset(Layout.Spacing.big)
+      make.top.equalTo(safeOrMarginLayoutGuide).inset(Layout.Spacing.big)
       make.leading.trailing.equalToSuperview().inset(Layout.Spacing.medium)
     }
 
-    addSubview(enterButton)
+    phoneNumberField.snp.makeConstraints { make in
+      make.width.equalToSuperview()
+    }
 
     enterButton.snp.makeConstraints { make in
-      make.leading.trailing.equalToSuperview().inset(Layout.Spacing.big)
-      make.bottom.equalToSuperview().inset(Layout.Spacing.mediumBig)
+      make.width.equalToSuperview()
     }
   }
 }

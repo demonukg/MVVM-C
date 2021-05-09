@@ -20,6 +20,8 @@
 		0A1A976926075A8B007E84DF /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A976826075A8B007E84DF /* AppRouter.swift */; };
 		0A1A977226077489007E84DF /* AppCoordinatorAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A977126077489007E84DF /* AppCoordinatorAssembly.swift */; };
 		0A1A977926077970007E84DF /* ServicesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A977826077970007E84DF /* ServicesAssembly.swift */; };
+		0A571EC32646FD520076BA3D /* PrimaryTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A571EC22646FD520076BA3D /* PrimaryTextField.swift */; };
+		0A571EC52647051B0076BA3D /* UIView+SafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A571EC42647051B0076BA3D /* UIView+SafeArea.swift */; };
 		0A6ED2EF260796C200807C43 /* Notification.Name+Logout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6ED2EE260796C200807C43 /* Notification.Name+Logout.swift */; };
 		0A6ED2FE26079E3000807C43 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6ED2F726079E3000807C43 /* AuthViewModel.swift */; };
 		0A6ED2FF26079E3000807C43 /* AuthModuleAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6ED2F826079E3000807C43 /* AuthModuleAssembly.swift */; };
@@ -94,6 +96,8 @@
 		0A1A976826075A8B007E84DF /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		0A1A977126077489007E84DF /* AppCoordinatorAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorAssembly.swift; sourceTree = "<group>"; };
 		0A1A977826077970007E84DF /* ServicesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesAssembly.swift; sourceTree = "<group>"; };
+		0A571EC22646FD520076BA3D /* PrimaryTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryTextField.swift; sourceTree = "<group>"; };
+		0A571EC42647051B0076BA3D /* UIView+SafeArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+SafeArea.swift"; sourceTree = "<group>"; };
 		0A6ED2EE260796C200807C43 /* Notification.Name+Logout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification.Name+Logout.swift"; sourceTree = "<group>"; };
 		0A6ED2F726079E3000807C43 /* AuthViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		0A6ED2F826079E3000807C43 /* AuthModuleAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthModuleAssembly.swift; sourceTree = "<group>"; };
@@ -319,6 +323,7 @@
 				0A96B183262356EE0072216A /* UIViewController+ViewHolder.swift */,
 				0A96B1992623EA7B0072216A /* UIViewController+Alert.swift */,
 				0A96B1CA2625CBD80072216A /* UIColor.swift */,
+				0A571EC42647051B0076BA3D /* UIView+SafeArea.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -386,6 +391,7 @@
 			children = (
 				0A96B1C62625C9EB0072216A /* HighlightedButton.swift */,
 				0A96B1CF2625CD160072216A /* PrimaryButton.swift */,
+				0A571EC22646FD520076BA3D /* PrimaryTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -694,7 +700,9 @@
 				0AF2CFCA2610CFF8006903CC /* ApiTarget.swift in Sources */,
 				0AF2CFE8261243AD006903CC /* MultipartFormDataConvertible.swift in Sources */,
 				0A96B1DB2625DAD90072216A /* ObservableType+LoadingSequence.swift in Sources */,
+				0A571EC52647051B0076BA3D /* UIView+SafeArea.swift in Sources */,
 				0AF2CFDB2610F48D006903CC /* ApiResponseError.swift in Sources */,
+				0A571EC32646FD520076BA3D /* PrimaryTextField.swift in Sources */,
 				0A1A9762260637E0007E84DF /* AppCoordinator.swift in Sources */,
 				0A96B184262356EE0072216A /* UIViewController+ViewHolder.swift in Sources */,
 				0AF2CFFB261A0261006903CC /* ApiRequestAdapter.swift in Sources */,
