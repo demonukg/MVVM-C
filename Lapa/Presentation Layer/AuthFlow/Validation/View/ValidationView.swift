@@ -6,8 +6,9 @@ final class ValidationView: UIView {
   var onEnterTap: SingleActionBlock<String>?
 
   private let pinField: UITextField = {
-    let textField = UITextField()
+    let textField = PrimaryTextField()
     textField.placeholder = "000000"
+    textField.keyboardType = .numberPad
     return textField
   }()
 
@@ -27,7 +28,7 @@ final class ValidationView: UIView {
 
   init() {
     super.init(frame: .zero)
-
+    backgroundColor = .white
     setupInitialLayout()
   }
 
@@ -38,10 +39,12 @@ final class ValidationView: UIView {
   private func setupInitialLayout() {
     let stack = [
       titleLabel,
-      pinField
+      pinField,
+      enterButton
     ]
     .toVerticalStackView()
     .spaced(Layout.Spacing.mediumBig)
+    .with(spacing: Layout.Spacing.mediumBiggest, after: pinField)
     .with(alignment: .center)
     .build()
 
@@ -52,11 +55,8 @@ final class ValidationView: UIView {
       make.leading.trailing.equalToSuperview().inset(Layout.Spacing.medium)
     }
 
-    addSubview(enterButton)
-
     enterButton.snp.makeConstraints { make in
       make.leading.trailing.equalToSuperview().inset(Layout.Spacing.big)
-      make.bottom.equalToSuperview().inset(Layout.Spacing.mediumBig)
     }
   }
 }

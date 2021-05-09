@@ -7,7 +7,7 @@ final class AuthView: UIView {
 
   let phoneNumberField: UITextField = {
     let textField = PrimaryTextField()
-    textField.attributedPlaceholder = NSAttributedString(string: "+73616751221", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+    textField.placeholder = "+73616751221"
     textField.keyboardType = .phonePad
     textField.layer.borderColor = UIColor.red.cgColor
     return textField
