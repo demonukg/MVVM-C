@@ -1,7 +1,8 @@
 import RxSwift
 
 protocol AuthenticationService {
-  
+
+  var scopes: [Scopes] { get }
   var token: OAuthToken? { get }
   var authenticated: Bool { get }
 
@@ -18,6 +19,8 @@ protocol LogoutListener {
 }
 
 final class AuthenticationServiceImpl: AuthenticationService {
+
+  var scopes: [Scopes] = []
   
   var token: OAuthToken?
   
@@ -36,6 +39,10 @@ final class AuthenticationServiceImpl: AuthenticationService {
   func login(_ login: String) -> Observable<Void> {
     apiService.makeRequest(to: OAuthServiceTarget.login(login: login))
       .result()
+      .do(onNext: { [unowned self] (response: LoginResponse) in
+        self.scopes = response.scopes
+      })
+      .asVoid()
   }
   
   func validate(login: String, password: String) -> Observable<OAuthToken> {

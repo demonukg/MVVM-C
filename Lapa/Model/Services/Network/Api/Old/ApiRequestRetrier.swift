@@ -1,8 +1,6 @@
 import Alamofire
 import RxSwift
 
-
-
 protocol ApiRequestRetrier: RequestRetrier {
 
   typealias RetryCompletion = (RetryResult) -> Void
@@ -81,5 +79,6 @@ private extension ApiRequestRetrierImpl {
   enum Constants {
     static let timeout: TimeInterval = 0.1
     static let badToken = 401
+    static let notAllowed = 403
   }
 }

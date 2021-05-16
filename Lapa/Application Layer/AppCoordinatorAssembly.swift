@@ -7,6 +7,7 @@ struct AppCoordinatorAssembly: Assembly {
       let assembler = Assembler(
         [
           AuthCoordinatorAssembly(),
+          ProfileCoordinatorAssembly(),
           MainCoordinatorAssembly()
         ],
         parent: parentAssembler

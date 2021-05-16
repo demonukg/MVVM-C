@@ -7,10 +7,20 @@ struct ApiRequest: ApiRequestable {
   private let request: Alamofire.DataRequest
 
   init(
-    url: URL,
+    authUrl: URL,
+    profileUrl: URL,
     target: ApiTarget,
     manager: Session
   ) {
+    
+    let url: URL = {
+      switch target.apiUrl {
+      case .auth:
+        return authUrl
+      case .profile:
+        return profileUrl
+      }
+    }()
 
     let requestUrl = url
       .appendingPathComponent(target.version.stringValue)
@@ -90,7 +100,12 @@ struct ApiRequest: ApiRequestable {
 
         if 200...299 ~= response.statusCode { return .success(()) }
 
+        if [409, 403, 401].contains(response.statusCode) {
+          return .failure(AFError.sessionDeinitialized)
+        }
+
         return .failure(ApiResponseError.badServerResponse)
+
 //        guard let apiError = try? JSONDecoder().decode(ApiError.self, from: data) else {
 //          return .failure(ApiResponseError.badServerResponse)
 //        }
@@ -115,7 +130,7 @@ struct ApiRequest: ApiRequestable {
       case .failure(let error):
         throw error
       case .success:
-        guard let data = response.data else { throw ApiResponseError.badServerResponse }
+        guard let data = response.data else { throw ApiResponseError.responseDecoding }
         return data
       }
     }

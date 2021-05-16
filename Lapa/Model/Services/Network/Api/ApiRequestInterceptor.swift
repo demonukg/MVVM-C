@@ -49,16 +49,12 @@ final class ApiRequestInterceptorImpl: ApiRequestInterceptor {
       lock.unlock()
     }
     guard
-      let asAFError = error.asAFError,
-      let statusCode = asAFError.responseCode
+      let apiError = error.asAFError,
+      apiError.isSessionDeinitializedError
     else {
       return completion(.doNotRetry)
     }
-
-    guard statusCode == Constants.badToken else {
-      completion(.doNotRetry)
-      return
-    }
+    
     refreshToken(completion: completion)
   }
 }

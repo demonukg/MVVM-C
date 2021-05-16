@@ -29,7 +29,7 @@ extension ApiRequestable {
             \(jsonString)
           """
         )
-        throw ApiResponseError.badServerResponse
+        throw ApiResponseError.responseDecoding
       }
     }
   }
@@ -39,7 +39,7 @@ extension ApiRequestable {
       let items = try decoder.decode(ResponseArray<T>.self, from: json).items
       let notNilItems = items.compactMap { $0 }
       if !ignoreNils && items.count != notNilItems.count {
-        throw ApiResponseError.badServerResponse
+        throw ApiResponseError.responseDecoding
       }
       return notNilItems
     }

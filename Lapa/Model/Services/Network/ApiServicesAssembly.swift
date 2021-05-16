@@ -20,8 +20,14 @@ struct ApiServicesAssembly: Assembly {
 
     container.register(ApiRequestable.self) { (resolver, target: ApiTarget) in
       let session = resolver.resolve(Session.self)!
-      let url = URL(string: "http://89.108.65.107:8000/api")!
-      return ApiRequest(url: url, target: target, manager: session)
+      let authUrl = URL(string: "http://89.108.65.107:8000/api")!
+      let profileUrl = URL(string: "http://89.108.65.107:8002/api")!
+      return ApiRequest(
+        authUrl: authUrl,
+        profileUrl: profileUrl,
+        target: target,
+        manager: session
+      )
     }
     .inObjectScope(.transient)
 

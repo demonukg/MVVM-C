@@ -5,7 +5,11 @@ enum OAuthServiceTarget: ApiTarget {
   case login(login: String)
   case validate(login: String, password: String)
   case refresh(refreshToken: String)
-  
+
+  var apiUrl: ApiUrl {
+    .auth
+  }
+
   var version: ApiVersion {
     .number(1)
   }

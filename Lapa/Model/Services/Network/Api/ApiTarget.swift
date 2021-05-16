@@ -29,8 +29,8 @@ enum ApiVersion {
 
 enum ApiUrl {
 
-  case standard
-  case new
+  case auth
+  case profile
 }
 
 enum RequestParameterType {
@@ -63,10 +63,6 @@ extension ApiTarget {
    var requestParameterType: RequestParameterType {
      method == .get ? .queryString : .bodyJSON
    }
-  
-  var apiUrl: ApiUrl {
-    .standard
-  }
   
   var multipartFormDataBody: MultipartFormDataConvertible? {
     nil

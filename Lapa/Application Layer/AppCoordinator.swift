@@ -10,12 +10,11 @@ final class AppCoordinatorImpl: BaseCoordinator, AppCoordinator {
     
     case initial
     case auth
+    case profile
     case main
   }
   
   private lazy var currentSteps = steps()
-  
-  //private var mainCoordinator: MainCoordinator?
 
   private let authService: AuthenticationService
   
@@ -37,7 +36,7 @@ final class AppCoordinatorImpl: BaseCoordinator, AppCoordinator {
   
   @objc
   private func logout() {
-    currentSteps = [.auth, .main]
+    currentSteps = [.auth, .profile, .main]
     //authService.logout()
     //mainCoordinator = nil
     start()
@@ -54,7 +53,7 @@ private extension AppCoordinatorImpl {
     var steps: [AppCoordinatorStep] = [.initial]
 
     if !authService.authenticated {
-      steps.append(.auth)
+      steps.append(contentsOf: [.auth, .profile])
     }
     steps.append(.main)
 
@@ -65,8 +64,10 @@ private extension AppCoordinatorImpl {
     switch step {
     case .auth:
       runAuthFlow(authType: .login)
+    case .profile:
+      let action: ProfileModule.Input.ActionType = authService.scopes.contains(.unregistered) ? .registration : .login
+      runProfileFlow(action: action)
     case .main:
-      print("runMainFlow")
       break
     //runMainFlow(with: option)
     case .initial:
@@ -79,6 +80,21 @@ private extension AppCoordinatorImpl {
     guard let nextStep = nextSteps.first else { fatalError("Steps is over, your flow is bad") }
     currentSteps = nextSteps
     startScenario(with: nextStep)
+  }
+
+  func runProfileFlow(action: ProfileModule.Input.ActionType) {
+    let coordinator = assembler.resolver.resolve(
+      ProfileCoordinator.self,
+      arguments: assembler,
+      ProfileCoordinatorAssembly.Input(action: action)
+    )!
+
+    coordinator.onFinish = { [weak self, weak coordinator] in
+      self?.removeDependency(coordinator)
+      self?.startNextStep(afterStep: .auth)
+    }
+    addDependency(coordinator)
+    coordinator.start()
   }
   
   func runAuthFlow(authType: AuthModule.Input.AuthType) {
