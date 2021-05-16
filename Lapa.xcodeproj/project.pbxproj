@@ -70,6 +70,11 @@
 		0A96B1DB2625DAD90072216A /* ObservableType+LoadingSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A96B1DA2625DAD90072216A /* ObservableType+LoadingSequence.swift */; };
 		0A9DA96826078F60007D935D /* AuthCoordinatorAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9DA96726078F60007D935D /* AuthCoordinatorAssembly.swift */; };
 		0A9DA96B26079295007D935D /* MainCoordinatorAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9DA96A26079295007D935D /* MainCoordinatorAssembly.swift */; };
+		0AB0BD03265137A4003CB045 /* StackScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB0BD02265137A4003CB045 /* StackScrollView.swift */; };
+		0AB0BD05265137FF003CB045 /* View+Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB0BD04265137FF003CB045 /* View+Configurable.swift */; };
+		0AB0BD0726513938003CB045 /* ProfileViewDataComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB0BD0626513938003CB045 /* ProfileViewDataComposer.swift */; };
+		0AB0BD0A26513AF1003CB045 /* VerticalSpacerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB0BD0926513AF1003CB045 /* VerticalSpacerView.swift */; };
+		0AB0BD0C26513CBA003CB045 /* KeyValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB0BD0B26513CBA003CB045 /* KeyValueView.swift */; };
 		0ABE9E05261A231E0019FF26 /* ApiRequestRetrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABE9E04261A231E0019FF26 /* ApiRequestRetrier.swift */; };
 		0ABE9E08261A42620019FF26 /* ApiRequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABE9E07261A42620019FF26 /* ApiRequestInterceptor.swift */; };
 		0ABE9E0F261E241E0019FF26 /* AuthenticationServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABE9E0E261E241E0019FF26 /* AuthenticationServiceAssembly.swift */; };
@@ -163,6 +168,11 @@
 		0A96B1DA2625DAD90072216A /* ObservableType+LoadingSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableType+LoadingSequence.swift"; sourceTree = "<group>"; };
 		0A9DA96726078F60007D935D /* AuthCoordinatorAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinatorAssembly.swift; sourceTree = "<group>"; };
 		0A9DA96A26079295007D935D /* MainCoordinatorAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorAssembly.swift; sourceTree = "<group>"; };
+		0AB0BD02265137A4003CB045 /* StackScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackScrollView.swift; sourceTree = "<group>"; };
+		0AB0BD04265137FF003CB045 /* View+Configurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Configurable.swift"; sourceTree = "<group>"; };
+		0AB0BD0626513938003CB045 /* ProfileViewDataComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewDataComposer.swift; sourceTree = "<group>"; };
+		0AB0BD0926513AF1003CB045 /* VerticalSpacerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalSpacerView.swift; sourceTree = "<group>"; };
+		0AB0BD0B26513CBA003CB045 /* KeyValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueView.swift; sourceTree = "<group>"; };
 		0ABE9E04261A231E0019FF26 /* ApiRequestRetrier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestRetrier.swift; sourceTree = "<group>"; };
 		0ABE9E07261A42620019FF26 /* ApiRequestInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestInterceptor.swift; sourceTree = "<group>"; };
 		0ABE9E0E261E241E0019FF26 /* AuthenticationServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationServiceAssembly.swift; sourceTree = "<group>"; };
@@ -254,6 +264,7 @@
 		0A1A974E26053438007E84DF /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				0AB0BD012651378C003CB045 /* StackScrollView */,
 				0A96B1C02625C2A30072216A /* StackView */,
 				0A96B1BB26249FE70072216A /* Architecture */,
 				0A96B1A22623F1490072216A /* Styles */,
@@ -377,6 +388,7 @@
 			isa = PBXGroup;
 			children = (
 				0A82548426498FBE002F07C2 /* ProfileViewModel.swift */,
+				0AB0BD0626513938003CB045 /* ProfileViewDataComposer.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -525,11 +537,30 @@
 		0A96B1C52625C9CB0072216A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0AB0BD0826513AE3003CB045 /* SpacersView */,
 				0A96B1C62625C9EB0072216A /* HighlightedButton.swift */,
 				0A96B1CF2625CD160072216A /* PrimaryButton.swift */,
 				0A571EC22646FD520076BA3D /* PrimaryTextField.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		0AB0BD012651378C003CB045 /* StackScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				0AB0BD02265137A4003CB045 /* StackScrollView.swift */,
+				0AB0BD04265137FF003CB045 /* View+Configurable.swift */,
+			);
+			path = StackScrollView;
+			sourceTree = "<group>";
+		};
+		0AB0BD0826513AE3003CB045 /* SpacersView */ = {
+			isa = PBXGroup;
+			children = (
+				0AB0BD0926513AF1003CB045 /* VerticalSpacerView.swift */,
+				0AB0BD0B26513CBA003CB045 /* KeyValueView.swift */,
+			);
+			path = SpacersView;
 			sourceTree = "<group>";
 		};
 		0ABE9E0B261A436E0019FF26 /* Old */ = {
@@ -832,10 +863,12 @@
 				0A96B1A02623ED2F0072216A /* ErrorView.swift in Sources */,
 				0A96B1B8262497510072216A /* Layout.swift in Sources */,
 				0A9232C126494E5900BB02C9 /* Profile.swift in Sources */,
+				0AB0BD0A26513AF1003CB045 /* VerticalSpacerView.swift in Sources */,
 				0A96B1AC2623F3110072216A /* ProgressSuccessView.swift in Sources */,
 				0A82548C26498FBE002F07C2 /* ProfileModule.swift in Sources */,
 				0ABE9E05261A231E0019FF26 /* ApiRequestRetrier.swift in Sources */,
 				0AF2CFE426124033006903CC /* ApiRequest.swift in Sources */,
+				0AB0BD05265137FF003CB045 /* View+Configurable.swift in Sources */,
 				0A96B1A42623F15A0072216A /* Fonts.swift in Sources */,
 				0AF2CFB02610C843006903CC /* AuthenticationService.swift in Sources */,
 				0A96B1D02625CD160072216A /* PrimaryButton.swift in Sources */,
@@ -852,6 +885,7 @@
 				0A571EC826491F160076BA3D /* ProfileServiceTarget.swift in Sources */,
 				0AF2CFCA2610CFF8006903CC /* ApiTarget.swift in Sources */,
 				0AF2CFE8261243AD006903CC /* MultipartFormDataConvertible.swift in Sources */,
+				0AB0BD0726513938003CB045 /* ProfileViewDataComposer.swift in Sources */,
 				0A96B1DB2625DAD90072216A /* ObservableType+LoadingSequence.swift in Sources */,
 				0A571EC52647051B0076BA3D /* UIView+SafeArea.swift in Sources */,
 				0AF2CFDB2610F48D006903CC /* ApiResponseError.swift in Sources */,
@@ -861,6 +895,7 @@
 				0AF2CFFB261A0261006903CC /* ApiRequestAdapter.swift in Sources */,
 				0AE0832A262699EB00F8DFCD /* ValidationModuleAssembly.swift in Sources */,
 				0AF2CFEB2612587A006903CC /* ApiServicesAssembly.swift in Sources */,
+				0AB0BD03265137A4003CB045 /* StackScrollView.swift in Sources */,
 				0A6ED30626079FF000807C43 /* AuthCoordinator.swift in Sources */,
 				0A9DA96B26079295007D935D /* MainCoordinatorAssembly.swift in Sources */,
 				0A96B1CB2625CBD80072216A /* UIColor.swift in Sources */,
@@ -875,6 +910,7 @@
 				0AF2CFBA2610CE77006903CC /* ApiService.swift in Sources */,
 				0A6ED30026079E3000807C43 /* AuthView.swift in Sources */,
 				0A96B18C2623583C0072216A /* VMLoadingType.swift in Sources */,
+				0AB0BD0C26513CBA003CB045 /* KeyValueView.swift in Sources */,
 				0AE08326262699EB00F8DFCD /* ValidationViewModel.swift in Sources */,
 				0A8254A2264ADFFF002F07C2 /* CreateProfileViewController.swift in Sources */,
 				0A9DA96826078F60007D935D /* AuthCoordinatorAssembly.swift in Sources */,

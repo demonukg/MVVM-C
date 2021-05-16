@@ -7,7 +7,7 @@ final class ProfileViewModel: ViewModelTransform {
   }
 
   struct Output {
-    let profile: Observable<Profile>
+    let data: Observable<[ConfigurableViewData]>
     let loading: Observable<VMLoadingType>
     let errors: Observable<VMErrorType>
   }
@@ -19,11 +19,16 @@ final class ProfileViewModel: ViewModelTransform {
   }
 
   func transform(input: Input) -> Output {
+    let composer = ProfileViewDataComposer()
+
     let profile = input.obtainData
-      .flatMap { self.profileService.getProfile().asLoadingSequence() }.share()
+      .flatMap { self.profileService.getProfile().asLoadingSequence() }
+      .share()
+
+    let viewData = profile.element.map { composer.makeViewDataArray(with: $0) }
 
     return Output(
-      profile: profile.element,
+      data: viewData,
       loading: profile.loading.asBlockingActivity(),
       errors: profile.errors.asMessage()
     )

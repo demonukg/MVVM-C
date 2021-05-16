@@ -9,8 +9,9 @@ final class ProfileViewController: UIViewController, ProfileModule, ViewHolder {
 
   init(viewModel: ProfileViewModel) {
     self.viewModel = viewModel
-
     super.init(nibName: nil, bundle: nil)
+
+    title = "Profile"
   }
 
   required init?(coder: NSCoder) {
@@ -28,9 +29,10 @@ final class ProfileViewController: UIViewController, ProfileModule, ViewHolder {
 
     let output = viewModel.transform(input: .init(obtainData: obtainData))
 
-    output.profile
-      .subscribe(onNext: { profile in
-        print("\(profile)")
+    output.data
+      .subscribe(onNext: { [unowned rootView] viewDatas in
+        rootView.stackScrollView.configure(viewDatas: viewDatas)
+        rootView.stackScrollView.refreshControl?.endRefreshing()
       })
       .disposed(by: disposeBag)
 
