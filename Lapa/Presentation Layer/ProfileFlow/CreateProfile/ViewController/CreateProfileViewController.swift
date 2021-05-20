@@ -22,6 +22,13 @@ final class CreateProfileViewController: UIViewController, CreateProfileModule, 
 
   override func loadView() {
     view = CreateProfileView()
+
+    if let profile = viewModel.profile {
+      rootView.nameField.text = profile.name
+      rootView.nicknameField.text = profile.nickname
+      rootView.cityField.text = profile.city
+      rootView.phoneNumberField.text = profile.phoneNumber
+    }
   }
 
   override func viewDidLoad() {

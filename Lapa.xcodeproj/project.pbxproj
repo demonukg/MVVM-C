@@ -75,6 +75,7 @@
 		0AB0BD0726513938003CB045 /* ProfileViewDataComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB0BD0626513938003CB045 /* ProfileViewDataComposer.swift */; };
 		0AB0BD0A26513AF1003CB045 /* VerticalSpacerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB0BD0926513AF1003CB045 /* VerticalSpacerView.swift */; };
 		0AB0BD0C26513CBA003CB045 /* KeyValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB0BD0B26513CBA003CB045 /* KeyValueView.swift */; };
+		0AB0BD0E26519D97003CB045 /* PrimaryButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB0BD0D26519D97003CB045 /* PrimaryButtonView.swift */; };
 		0ABE9E05261A231E0019FF26 /* ApiRequestRetrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABE9E04261A231E0019FF26 /* ApiRequestRetrier.swift */; };
 		0ABE9E08261A42620019FF26 /* ApiRequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABE9E07261A42620019FF26 /* ApiRequestInterceptor.swift */; };
 		0ABE9E0F261E241E0019FF26 /* AuthenticationServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABE9E0E261E241E0019FF26 /* AuthenticationServiceAssembly.swift */; };
@@ -173,6 +174,7 @@
 		0AB0BD0626513938003CB045 /* ProfileViewDataComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewDataComposer.swift; sourceTree = "<group>"; };
 		0AB0BD0926513AF1003CB045 /* VerticalSpacerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalSpacerView.swift; sourceTree = "<group>"; };
 		0AB0BD0B26513CBA003CB045 /* KeyValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueView.swift; sourceTree = "<group>"; };
+		0AB0BD0D26519D97003CB045 /* PrimaryButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonView.swift; sourceTree = "<group>"; };
 		0ABE9E04261A231E0019FF26 /* ApiRequestRetrier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestRetrier.swift; sourceTree = "<group>"; };
 		0ABE9E07261A42620019FF26 /* ApiRequestInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestInterceptor.swift; sourceTree = "<group>"; };
 		0ABE9E0E261E241E0019FF26 /* AuthenticationServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationServiceAssembly.swift; sourceTree = "<group>"; };
@@ -559,6 +561,7 @@
 			children = (
 				0AB0BD0926513AF1003CB045 /* VerticalSpacerView.swift */,
 				0AB0BD0B26513CBA003CB045 /* KeyValueView.swift */,
+				0AB0BD0D26519D97003CB045 /* PrimaryButtonView.swift */,
 			);
 			path = SpacersView;
 			sourceTree = "<group>";
@@ -878,6 +881,7 @@
 				0A6ED2FE26079E3000807C43 /* AuthViewModel.swift in Sources */,
 				0A82549F264ADFFF002F07C2 /* CreateProfileViewModel.swift in Sources */,
 				0A1A972C260529C5007E84DF /* AppDelegate.swift in Sources */,
+				0AB0BD0E26519D97003CB045 /* PrimaryButtonView.swift in Sources */,
 				0A1A9749260531DC007E84DF /* Presentable.swift in Sources */,
 				0A82548B26498FBE002F07C2 /* ProfileViewModel.swift in Sources */,
 				0AF2CFF32617B51A006903CC /* Token.swift in Sources */,

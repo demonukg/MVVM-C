@@ -5,6 +5,8 @@ final class ProfileViewController: UIViewController, ProfileModule, ViewHolder {
 
   typealias RootViewType = ProfileView
 
+  var onEditProfile: SingleActionBlock<Profile>?
+
   private let viewModel: ProfileViewModel
 
   init(viewModel: ProfileViewModel) {
@@ -33,6 +35,12 @@ final class ProfileViewController: UIViewController, ProfileModule, ViewHolder {
       .subscribe(onNext: { [unowned rootView] viewDatas in
         rootView.stackScrollView.configure(viewDatas: viewDatas)
         rootView.stackScrollView.refreshControl?.endRefreshing()
+      })
+      .disposed(by: disposeBag)
+
+    output.onEditTap
+      .subscribe(onNext: { [weak self] in
+        self?.onEditProfile?($0)
       })
       .disposed(by: disposeBag)
 

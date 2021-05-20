@@ -46,7 +46,7 @@ final class KeyValueView: UIView {
 
 extension KeyValueView: ConfigurableView {
 
-  struct ViewData: ConfigurableViewData, Equatable {
+  struct ViewData: ConfigurableViewData {
     var viewType: ConfigurableView.Type { KeyValueView.self }
 
     let keyText: String

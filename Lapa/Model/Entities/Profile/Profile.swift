@@ -4,7 +4,7 @@ struct Profile: Codable {
   let name: String
   let nickname: String
   let phoneNumber: String
-
+  let city: String
 
   enum CodingKeys: String, CodingKey {
 
@@ -12,6 +12,7 @@ struct Profile: Codable {
     case name
     case nickname
     case phoneNumber = "phone_number"
+    case city
   }
 }
 

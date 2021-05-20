@@ -27,7 +27,7 @@ final class VerticalSpacerView: UIView {
 
 extension VerticalSpacerView: ConfigurableView {
 
-  struct ViewData: ConfigurableViewData, Equatable {
+  struct ViewData: ConfigurableViewData {
     var viewType: ConfigurableView.Type { VerticalSpacerView.self }
 
     let color: UIColor?

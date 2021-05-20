@@ -9,4 +9,6 @@ struct ProfileModuleInput {
 protocol ProfileModule: Presentable {
 
   typealias Input = ProfileModuleInput
+
+  var onEditProfile: SingleActionBlock<Profile>? { get set }
 }

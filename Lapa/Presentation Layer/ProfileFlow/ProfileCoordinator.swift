@@ -26,7 +26,7 @@ final class ProfileCoordinatorImpl: BaseCoordinator, ProfileCoordinator {
     case .login:
       showProfile()
     case .registration:
-      createProfile()
+      createProfile(input: .init(currentAction: .create, profile: nil))
     }
   }
 }
@@ -38,18 +38,34 @@ private extension ProfileCoordinatorImpl {
       ProfileModule.self,
       argument: ProfileModule.Input()
     )!
+
+    module.onEditProfile = { [weak self] in
+      self?.createProfile(input: .init(currentAction: .update, profile: $0))
+    }
+
     router.setRootModule(module)
   }
 
-  func createProfile() {
+  func createProfile(input: CreateProfileModule.Input) {
     let module = assembler.resolver.resolve(
       CreateProfileModule.self,
-      argument: CreateProfileModule.Input()
+      argument: input
     )!
 
-    module.onFinish = { [weak self] in
-      self?.showProfile()
+    module.onFinish = { [weak self, weak router] in
+      switch input.currentAction {
+      case .create:
+        self?.showProfile()
+      case .update:
+        router?.popModule()
+      }
     }
-    router.setRootModule(module)
+
+    switch input.currentAction {
+    case .create:
+      router.setRootModule(module)
+    case .update:
+      router.push(module)
+    }
   }
 }
