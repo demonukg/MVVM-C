@@ -1,4 +1,4 @@
-target 'Lapa' do
+target 'RxMVVM-C' do
     use_frameworks!
   
     pod 'RxCocoa', '~> 6.1'

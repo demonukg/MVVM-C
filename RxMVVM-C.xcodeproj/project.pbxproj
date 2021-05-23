@@ -100,11 +100,12 @@
 		0AF2CFF32617B51A006903CC /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF2CFF22617B51A006903CC /* Token.swift */; };
 		0AF2CFF72619FE2A006903CC /* Observable+asVoid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF2CFF62619FE2A006903CC /* Observable+asVoid.swift */; };
 		0AF2CFFB261A0261006903CC /* ApiRequestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF2CFFA261A0261006903CC /* ApiRequestAdapter.swift */; };
-		C95266B5DF26593476972641 /* Pods_Lapa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E4B059F21F6717E85E8175 /* Pods_Lapa.framework */; };
+		45F1412F2363F2A15152AB5F /* Pods_RxMVVM_C.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04B4B86444A9FA23CE760EB5 /* Pods_RxMVVM_C.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0A1A9728260529C5007E84DF /* Lapa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lapa.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		04B4B86444A9FA23CE760EB5 /* Pods_RxMVVM_C.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxMVVM_C.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A1A9728260529C5007E84DF /* RxMVVM-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RxMVVM-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A1A972B260529C5007E84DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A1A972D260529C5007E84DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0A1A9734260529C7007E84DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -199,9 +200,10 @@
 		0AF2CFF22617B51A006903CC /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		0AF2CFF62619FE2A006903CC /* Observable+asVoid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+asVoid.swift"; sourceTree = "<group>"; };
 		0AF2CFFA261A0261006903CC /* ApiRequestAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestAdapter.swift; sourceTree = "<group>"; };
+		175A500A34B69F31F61B1E40 /* Pods-RxMVVM-C.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMVVM-C.debug.xcconfig"; path = "Target Support Files/Pods-RxMVVM-C/Pods-RxMVVM-C.debug.xcconfig"; sourceTree = "<group>"; };
 		3A39E3AEB79F0A71461C36FB /* Pods-Lapa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lapa.debug.xcconfig"; path = "Target Support Files/Pods-Lapa/Pods-Lapa.debug.xcconfig"; sourceTree = "<group>"; };
-		85E4B059F21F6717E85E8175 /* Pods_Lapa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lapa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D25FE9DE9FEE173E1B05181B /* Pods-Lapa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lapa.release.xcconfig"; path = "Target Support Files/Pods-Lapa/Pods-Lapa.release.xcconfig"; sourceTree = "<group>"; };
+		E81F3B319CFF7082AFD86121 /* Pods-RxMVVM-C.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMVVM-C.release.xcconfig"; path = "Target Support Files/Pods-RxMVVM-C/Pods-RxMVVM-C.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,7 +211,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C95266B5DF26593476972641 /* Pods_Lapa.framework in Frameworks */,
+				45F1412F2363F2A15152AB5F /* Pods_RxMVVM_C.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,7 +221,7 @@
 		0A1A971F260529C5007E84DF = {
 			isa = PBXGroup;
 			children = (
-				0A1A972A260529C5007E84DF /* Lapa */,
+				0A1A972A260529C5007E84DF /* RxMVVM-C */,
 				0A1A9729260529C5007E84DF /* Products */,
 				3393855E0240C84F675C213D /* Pods */,
 				75924DB81FEF161E065A3349 /* Frameworks */,
@@ -229,12 +231,12 @@
 		0A1A9729260529C5007E84DF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0A1A9728260529C5007E84DF /* Lapa.app */,
+				0A1A9728260529C5007E84DF /* RxMVVM-C.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0A1A972A260529C5007E84DF /* Lapa */ = {
+		0A1A972A260529C5007E84DF /* RxMVVM-C */ = {
 			isa = PBXGroup;
 			children = (
 				0A1A972B260529C5007E84DF /* AppDelegate.swift */,
@@ -248,7 +250,7 @@
 				0A1A974E26053438007E84DF /* Helpers */,
 				0A96B1C52625C9CB0072216A /* Views */,
 			);
-			path = Lapa;
+			path = "RxMVVM-C";
 			sourceTree = "<group>";
 		};
 		0A1A974326053180007E84DF /* Coordinator */ = {
@@ -708,6 +710,8 @@
 			children = (
 				3A39E3AEB79F0A71461C36FB /* Pods-Lapa.debug.xcconfig */,
 				D25FE9DE9FEE173E1B05181B /* Pods-Lapa.release.xcconfig */,
+				175A500A34B69F31F61B1E40 /* Pods-RxMVVM-C.debug.xcconfig */,
+				E81F3B319CFF7082AFD86121 /* Pods-RxMVVM-C.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -715,7 +719,7 @@
 		75924DB81FEF161E065A3349 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				85E4B059F21F6717E85E8175 /* Pods_Lapa.framework */,
+				04B4B86444A9FA23CE760EB5 /* Pods_RxMVVM_C.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -723,9 +727,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0A1A9727260529C5007E84DF /* Lapa */ = {
+		0A1A9727260529C5007E84DF /* RxMVVM-C */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0A1A973C260529C7007E84DF /* Build configuration list for PBXNativeTarget "Lapa" */;
+			buildConfigurationList = 0A1A973C260529C7007E84DF /* Build configuration list for PBXNativeTarget "RxMVVM-C" */;
 			buildPhases = (
 				193867D1BCCBC9A8521693DC /* [CP] Check Pods Manifest.lock */,
 				0A1A9724260529C5007E84DF /* Sources */,
@@ -737,9 +741,9 @@
 			);
 			dependencies = (
 			);
-			name = Lapa;
+			name = "RxMVVM-C";
 			productName = Lapa;
-			productReference = 0A1A9728260529C5007E84DF /* Lapa.app */;
+			productReference = 0A1A9728260529C5007E84DF /* RxMVVM-C.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -756,7 +760,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0A1A9723260529C5007E84DF /* Build configuration list for PBXProject "Lapa" */;
+			buildConfigurationList = 0A1A9723260529C5007E84DF /* Build configuration list for PBXProject "RxMVVM-C" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -769,7 +773,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0A1A9727260529C5007E84DF /* Lapa */,
+				0A1A9727260529C5007E84DF /* RxMVVM-C */,
 			);
 		};
 /* End PBXProject section */
@@ -793,15 +797,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Lapa/Pods-Lapa-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-RxMVVM-C/Pods-RxMVVM-C-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Lapa/Pods-Lapa-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-RxMVVM-C/Pods-RxMVVM-C-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lapa/Pods-Lapa-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RxMVVM-C/Pods-RxMVVM-C-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		193867D1BCCBC9A8521693DC /* [CP] Check Pods Manifest.lock */ = {
@@ -819,7 +823,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Lapa-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-RxMVVM-C-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1059,18 +1063,18 @@
 		};
 		0A1A973D260529C7007E84DF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3A39E3AEB79F0A71461C36FB /* Pods-Lapa.debug.xcconfig */;
+			baseConfigurationReference = 175A500A34B69F31F61B1E40 /* Pods-RxMVVM-C.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S6ABAFXJXX;
-				INFOPLIST_FILE = Lapa/Info.plist;
+				INFOPLIST_FILE = "RxMVVM-C/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lapa.Lapa;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rx.mvvm-c";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1079,18 +1083,18 @@
 		};
 		0A1A973E260529C7007E84DF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D25FE9DE9FEE173E1B05181B /* Pods-Lapa.release.xcconfig */;
+			baseConfigurationReference = E81F3B319CFF7082AFD86121 /* Pods-RxMVVM-C.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S6ABAFXJXX;
-				INFOPLIST_FILE = Lapa/Info.plist;
+				INFOPLIST_FILE = "RxMVVM-C/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lapa.Lapa;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rx.mvvm-c";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1100,7 +1104,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0A1A9723260529C5007E84DF /* Build configuration list for PBXProject "Lapa" */ = {
+		0A1A9723260529C5007E84DF /* Build configuration list for PBXProject "RxMVVM-C" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0A1A973A260529C7007E84DF /* Debug */,
@@ -1109,7 +1113,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0A1A973C260529C7007E84DF /* Build configuration list for PBXNativeTarget "Lapa" */ = {
+		0A1A973C260529C7007E84DF /* Build configuration list for PBXNativeTarget "RxMVVM-C" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0A1A973D260529C7007E84DF /* Debug */,
